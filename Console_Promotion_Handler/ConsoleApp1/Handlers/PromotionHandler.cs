@@ -8,5 +8,11 @@ namespace PromotionHandler.Handlers
 {
     class PromotionHandler
     {
+        public void GetPromotionsOffer()
+        {
+
+            List<string> promotionType = new List<string>();
+            promotionType.Add()
+        }
     }
 }

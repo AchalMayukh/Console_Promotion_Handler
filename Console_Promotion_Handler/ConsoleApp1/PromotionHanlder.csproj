@@ -44,9 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Handlers\OrdersHandler.cs" />
+    <Compile Include="Handlers\PriceHandler.cs" />
     <Compile Include="Handlers\PromotionHandler.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Promotion.cs" />
+    <Compile Include="Model\SKU.cs" />
+    <Compile Include="Model\UnitPrice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

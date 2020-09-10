@@ -14,6 +14,10 @@ namespace PromotionHandler
         {
             var promotions = GetActivePromotions();
             var orders = OrdersHandler.GetOrders();
+            var totalPrice = PriceHandler.CalculateOrderPrice(orders);
+
+            Console.log()
+
             
 
         }

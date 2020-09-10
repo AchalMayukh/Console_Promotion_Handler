@@ -9,7 +9,7 @@ namespace PromotionHandler.Handlers
 {
     class OrdersHandler
     {
-        public static IDictionary<char, int> GetOrders()
+        public static Dictionary<char, int> GetOrders()
         {
             Dictionary<char, int> orders = new Dictionary<char, int>();
             bool wantSomethingElse = true;
@@ -67,7 +67,7 @@ namespace PromotionHandler.Handlers
         {
             Order order = new Order();
             string skuid = null;
-            char[] SKUIDs = Enumerable.Range('A', 'Z' - 'A' + 1).Select(i => ((char)i)).ToArray();
+            char[] SKUIDs = SKU.IDs;
             Console.Write("Please enter SKU ids out of given list to order: " + string.Join(",", SKUIDs) + "\n");
 
             bool validInput = false;
