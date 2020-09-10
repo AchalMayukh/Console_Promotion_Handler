@@ -1,0 +1,7 @@
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\obj\Debug\PromotionHanlder.csprojAssemblyReference.cache
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\obj\Debug\PromotionHanlder.csproj.CoreCompileInputs.cache
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\bin\Debug\PromotionHandlder.exe.config
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\bin\Debug\PromotionHandlder.exe
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\bin\Debug\PromotionHandlder.pdb
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\obj\Debug\PromotionHandlder.exe
+C:\Users\91988\source\repos\Console_Promotion_Handler\Console_Promotion_Handler\ConsoleApp1\obj\Debug\PromotionHandlder.pdb
