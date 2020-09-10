@@ -14,7 +14,7 @@ namespace PromotionHandler.Handlers
             int totalPrice = 0;
             foreach (var order in orders)
             {
-                totalPrice += UnitPrice.GetPrices()[order.Key] * order.Value;
+                totalPrice += UnitPriceHandler.GetUnitPrices().Where(t=>t.skuid==order.Key).Select(t=>t.price).FirstOrDefault()*order.Value;
             }
             return totalPrice;
         }

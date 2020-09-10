@@ -45,7 +45,8 @@
   <ItemGroup>
     <Compile Include="Handlers\OrdersHandler.cs" />
     <Compile Include="Handlers\PriceHandler.cs" />
-    <Compile Include="Handlers\PromotionHandler.cs" />
+    <Compile Include="Handlers\PromotionOfferHandler.cs" />
+    <Compile Include="Handlers\UnitPriceHandler.cs" />
     <Compile Include="Model\Order.cs" />
     <Compile Include="Model\Promotion.cs" />
     <Compile Include="Model\SKU.cs" />

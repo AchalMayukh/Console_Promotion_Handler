@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PromotionHandler.Handlers
 {
-    class OrdersHandler
+    public class OrdersHandler
     {
         public static Dictionary<char, int> GetOrders()
         {

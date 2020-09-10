@@ -8,6 +8,8 @@ namespace PromotionHandler.Model
 {
     public class Promotion
     {
-
+        public Dictionary<char, int> sku;
+        public int price;
+        public string deal;
     }
 }

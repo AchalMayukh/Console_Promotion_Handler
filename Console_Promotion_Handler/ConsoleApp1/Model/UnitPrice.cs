@@ -8,12 +8,9 @@ namespace PromotionHandler.Model
 {
     class UnitPrice
     {
-      
-        public static Dictionary<char, int> GetPrices()
-        {
-            Dictionary<char, int> quote = new Dictionary<char, int>();
-            
-            return quote;
-        }
+
+        public char skuid;
+        public int price;
+
     }
 }
