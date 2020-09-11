@@ -31,5 +31,37 @@ namespace PromotionHandler.Handlers
             promotions.Add(promotion);
 
         }
+        public static List<Promotion> DisplayPromptions()
+        {
+            int i = 1;
+            var promotions = PromotionOfferHandler.GetPromotionsOffer();
+            Console.WriteLine("Active Promotions");
+            foreach (Promotion promotion in promotions)
+            {
+                Console.WriteLine(i.ToString() + ": " + promotion.deal);
+                i++;
+            }
+
+            //bool validPromotion = false;
+            //Promotion selectedPromotion = null;
+            //do
+            //{
+            //    Console.WriteLine("Choose only one offer by valid id (1,2...)");
+            //    var promotionId = Console.ReadLine();
+            //    if (Convert.ToInt32(promotionId) < i && Convert.ToInt32(promotionId) > 0)
+            //    {
+            //        selectedPromotion = promotions[Convert.ToInt32(promotionId) - 1];
+            //        validPromotion = true;
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        validPromotion = false;
+            //        continue;
+            //    }
+            //} while (!validPromotion);
+
+            return promotions;
+        }
     }
 }

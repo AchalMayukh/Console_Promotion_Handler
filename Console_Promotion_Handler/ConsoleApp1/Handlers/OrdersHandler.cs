@@ -9,13 +9,13 @@ namespace PromotionHandler.Handlers
 {
     public class OrdersHandler
     {
-        public static Dictionary<char, int> GetOrders()
+        public static List<Order> GetOrders()
         {
-            Dictionary<char, int> orders = new Dictionary<char, int>();
+            List<Order> orders = new List<Order>();
             bool wantSomethingElse = true;
 
             Order order = GetOrder();
-            orders.Add(order.SKUID, order.quantity);
+            orders.Add(order);
 
             do
             {
@@ -41,13 +41,15 @@ namespace PromotionHandler.Handlers
                 if (input == "Y")
                 {
                     Order newOrder = GetOrder();
-                    if (orders.ContainsKey(newOrder.SKUID))
+                    if (orders.Where(o=>o.SKUID==newOrder.SKUID).Count()>0)
                     {
-                        orders[newOrder.SKUID] += newOrder.quantity;
+                       var ord = orders.Where(o => o.SKUID == newOrder.SKUID).FirstOrDefault();
+                        if (ord != null)
+                            ord = newOrder;
                     }
                     else
                     {
-                        orders.Add(newOrder.SKUID, newOrder.quantity);
+                        orders.Add(newOrder);
 
                     }
                     wantSomethingElse = true;

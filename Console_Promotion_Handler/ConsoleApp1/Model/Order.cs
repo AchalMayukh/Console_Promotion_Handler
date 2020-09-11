@@ -10,5 +10,7 @@ namespace PromotionHandler.Model
     {
         public char SKUID;
         public int quantity;
+        public int price;
+        public bool processed;
     }
 }

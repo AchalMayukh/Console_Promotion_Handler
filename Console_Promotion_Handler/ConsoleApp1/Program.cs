@@ -12,34 +12,42 @@ namespace PromotionHandler
     {
         static void Main(string[] args)
         {
-            int i = 1;
+            //Create Unit Prices
             UnitPriceHandler.CreateUnitPrice('A', 50);
-            Dictionary<char, int> sku = new Dictionary<char, int>();
-            sku.Add('A', 3);
+            UnitPriceHandler.CreateUnitPrice('B', 30);
+            UnitPriceHandler.CreateUnitPrice('C', 20);
+            UnitPriceHandler.CreateUnitPrice('D', 15);
 
-            PromotionOfferHandler.CreatePromotion(sku, 130);
+            //Create Promotions
+            Dictionary<char, int> sku1 = new Dictionary<char, int>();
+            sku1.Add('A', 3);
+            
+            PromotionOfferHandler.CreatePromotion(sku1, 130);
             Dictionary<char, int> sku2 = new Dictionary<char, int>();
-            sku2.Add('C', 1);
-            sku2.Add('D', 1);
-            PromotionOfferHandler.CreatePromotion(sku2, 30);
+            sku2.Add('B', 2);
+            PromotionOfferHandler.CreatePromotion(sku2, 45);
+            Dictionary<char, int> sku3 = new Dictionary<char, int>();
+            sku3.Add('C', 1);
+            sku3.Add('D', 1);
+            PromotionOfferHandler.CreatePromotion(sku3, 30);
 
+            //Display Unit Prices
             var unitPrices = UnitPriceHandler.GetUnitPrices();
             Console.WriteLine("Unit Price for SKU IDs\n");
             foreach (var unitPrice in unitPrices)
             {
                 Console.WriteLine(unitPrice.skuid + "\t" + unitPrice.price);
             }
-            var promotions = PromotionOfferHandler.GetPromotionsOffer();
-            Console.WriteLine("Active Promotions");
-            foreach (Promotion promotion in promotions)
-            {
-                Console.WriteLine(i.ToString() + ": " + promotion.deal);
-                i++;
-            }
-            Console.WriteLine("Choose only one offer by id (1,2...)");
-            var promotionId = Console.ReadLine();
+
+            //Display Promotions
+            List<Promotion> promotions = PromotionOfferHandler.DisplayPromptions();
+
+            //Get orders
             var orders = OrdersHandler.GetOrders();
-            var totalPrice = PriceHandler.CalculateOrderPrice(orders);
+
+
+            //Calculate And Display Price
+            PriceHandler.CalculateOrderPrice(orders, promotions) ;
 
 
 
