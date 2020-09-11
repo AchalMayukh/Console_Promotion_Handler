@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace PromotionHandler.Handlers
 {
-    class UnitPriceHandler
+    public class UnitPriceHandler:IUnitPriceHandler
     {
         static List<UnitPrice> unitPrices = new List<UnitPrice>();
-        public static void CreateUnitPrice(char sku, int price)
+        public void CreateUnitPrice(char sku, int price)
         {
             UnitPrice unitPrice = new UnitPrice();
             unitPrice.skuid = sku;
             unitPrice.price = price;
             unitPrices.Add(unitPrice);
         }
-        public static List<UnitPrice> GetUnitPrices()
+        public List<UnitPrice> GetUnitPrices()
         {
             return unitPrices;
         }

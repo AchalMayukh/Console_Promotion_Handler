@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handlers\IOrdersHandler.cs" />
+    <Compile Include="Handlers\IPromotionOfferHandler.cs" />
+    <Compile Include="Handlers\IUnitPriceHandler.cs" />
+    <Compile Include="Handlers\MockScenario1OrdersHandler.cs" />
+    <Compile Include="Handlers\MockScenario2OrdersHandler.cs" />
+    <Compile Include="Handlers\MockScenario3OrdersHandler.cs" />
     <Compile Include="Handlers\OrdersHandler.cs" />
     <Compile Include="Handlers\PriceHandler.cs" />
     <Compile Include="Handlers\PromotionOfferHandler.cs" />

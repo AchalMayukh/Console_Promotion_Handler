@@ -7,15 +7,13 @@ using System.Threading.Tasks;
 
 namespace PromotionHandler.Handlers
 {
-    class PriceHandler
+    public class PriceHandler
     {
-        public static void CalculateOrderPrice(List<Order> orders,List<Promotion> promotions)
+        public  int CalculateOrderPrice(List<Order> orders,List<Promotion> promotions, List<UnitPrice> unitPrices)
         {
-            List<UnitPrice> unitPrices = UnitPriceHandler.GetUnitPrices();
             int totalPrice = 0;
             foreach (var order in orders)
             {
-                int price = 0;
                 List<Promotion> applicablePromotions = new List<Promotion>();
                 //check for order.sku if promotions has multiple enteries
                 foreach (var promotion in promotions)
@@ -129,8 +127,8 @@ namespace PromotionHandler.Handlers
                 
             }
             totalPrice = orders.Select(t => t.price).Sum();
-            Console.WriteLine("Total \t"+totalPrice.ToString());
-            Console.ReadLine();
+            return totalPrice;
+            
         }
     }
 }

@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace PromotionHandler.Handlers
 {
-    public class OrdersHandler
+    public class OrdersHandler : IOrdersHandler
     {
-        public static List<Order> GetOrders()
+
+        List<Order> orders = new List<Order>();
+        public  List<Order> GetOrders()
         {
-            List<Order> orders = new List<Order>();
             bool wantSomethingElse = true;
 
             Order order = GetOrder();
@@ -65,7 +66,7 @@ namespace PromotionHandler.Handlers
             } while (wantSomethingElse);
             return orders;
         }
-        public static Order GetOrder()
+        public  Order GetOrder()
         {
             Order order = new Order();
             string skuid = null;
@@ -88,10 +89,13 @@ namespace PromotionHandler.Handlers
             order.SKUID = skuid.ToCharArray()[0];
             Console.Write("Enter Quantity: ");
             order.quantity = Convert.ToInt32(Console.ReadLine());
+            order.price = 0;
+            order.processed = false;
 
 
             return order;
         }
+       
     }
 }
 

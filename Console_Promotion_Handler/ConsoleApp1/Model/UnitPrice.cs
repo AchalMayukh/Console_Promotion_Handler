@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PromotionHandler.Model
 {
-    class UnitPrice
+    public class UnitPrice
     {
 
         public char skuid;
